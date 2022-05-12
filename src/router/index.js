@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import GifsView from "../views/GifsView.vue";
+import DocsView from "../views/DocsView.vue";
 
 const routes = [
   {
@@ -15,6 +17,16 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/gifs",
+    name: "gifs",
+    component: GifsView,
+  },
+  {
+    path: "/docs",
+    name: "docs",
+    component: DocsView,
   },
 ];
 
